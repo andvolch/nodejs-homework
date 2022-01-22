@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import repositoryContacts from "../../repository/contacts";
 import { HttpCode } from "../../lib/constants";
 import {
@@ -22,6 +23,7 @@ const aggregation = async (req, res, next) => {
 const uploadAvatar = async (req, res, next) => {
   const uploadService = new UploadFileService(
     LocalFileStorage,
+    // CloudFileStorage,
     req.file,
     req.user
   );
